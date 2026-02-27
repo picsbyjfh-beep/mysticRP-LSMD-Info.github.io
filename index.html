@@ -5,39 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LSMD - Los Santos Medical Department | Mystic RP</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <i class="fas fa-ambulance"></i>
+            <h2>LSMD Loading...</h2>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-ambulance"></i> LSMD
+                <i class="fas fa-heartbeat"></i>
+                <span>LSMD</span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Startseite</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">Über uns</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#tasks" class="nav-link">Aufgaben</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#career" class="nav-link">Karriere</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#team" class="nav-link">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#apply" class="nav-link">Bewerbung</a>
-                </li>
+                <li><a href="#home" class="nav-link">Startseite</a></li>
+                <li><a href="#about" class="nav-link">Über Uns</a></li>
+                <li><a href="#departments" class="nav-link">Abteilungen</a></li>
+                <li><a href="#ranks" class="nav-link">Ränge</a></li>
+                <li><a href="#stats" class="nav-link">Statistiken</a></li>
+                <li><a href="#career" class="nav-link">Karriere</a></li>
+                <li><a href="#apply" class="nav-link">Bewerbung</a></li>
+                <li><a href="https://discord.gg/HzUu9z8zwr" class="nav-discord" target="_blank">Discord</a></li>
             </ul>
-            <a href="https://discord.gg/HzUu9z8zwr" class="discord-btn" target="_blank">
-                <i class="fab fa-discord"></i> Discord
-            </a>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -50,153 +51,211 @@
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content">
-            <h1 class="hero-title">LOS SANTOS MEDICAL DEPARTMENT</h1>
-            <p class="hero-motto">Wenn Sekunden zählen, sind wir die Antwort.</p>
-            <a href="#apply" class="cta-btn">Jetzt Bewerben</a>
+            <div class="hero-text">
+                <h1 class="hero-title">LOS SANTOS MEDICAL DEPARTMENT</h1>
+                <p class="hero-subtitle">Wenn Sekunden zählen, sind wir die Antwort.</p>
+                <a href="#apply" class="cta-btn primary">Jetzt Bewerben</a>
+            </div>
         </div>
     </section>
 
-    <!-- Über uns -->
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">Über uns</h2>
-            <p class="section-text">
-                Das Los Santos Medical Department (LSMD) ist der führende Rettungsdienst auf dem Mystic RP GTA 5 Roleplay Server. Wir sorgen für medizinische Versorgung in Los Santos und retten Leben rund um die Uhr.[web:1][web:5]
-            </p>
-            <p class="section-text">
-                Im Roleplay-Kontext verkörpern wir professionelle Sanitäter, Ärzte und Rettungskräfte. Unsere Mission: Schnelle Hilfe bei Unfällen, Notfällen und Großschadenslagen.
-            </p>
+            <div class="about-content">
+                <p>Das Los Santos Medical Department (LSMD) ist die medizinische Rettungsorganisation von Los Santos.</p>
+                <p>Unsere Aufgabe ist es, Bürgern in medizinischen Notfällen zu helfen, Verletzte zu versorgen und Leben zu retten.</p>
+                <p>Unsere Sanitäter und Ärzte arbeiten täglich zusammen, um schnelle und professionelle Hilfe zu leisten.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Aufgaben -->
-    <section id="tasks" class="section">
+    <!-- Departments Section -->
+    <section id="departments" class="section">
         <div class="container">
-            <h2 class="section-title">Unsere Aufgaben</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <i class="fas fa-heartbeat"></i>
-                    <h3>Notfallrettung</h3>
-                    <p>Schnelle Hilfe bei Unfällen und Herzstillständen.</p>
+            <h2 class="section-title">Unsere Abteilungen</h2>
+            <div class="departments-grid">
+                <div class="department-card">
+                    <i class="fas fa-crown"></i>
+                    <h3>Direktion</h3>
+                    <p>Leitung und strategische Steuerung des LSMD</p>
                 </div>
-                <div class="card">
-                    <i class="fas fa-hospital"></i>
-                    <h3>Medizinische Versorgung</h3>
-                    <p>Behandlung und Stabilisierung Verletzter.</p>
+                <div class="department-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>Management & Verwaltung</h3>
+                    <p>Personal und organisatorische Abläufe</p>
                 </div>
-                <div class="card">
+                <div class="department-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Ärztliche Leitung</h3>
+                    <p>Medizinische Fachaufsicht und Koordination</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Ärzte & Fachpersonal</h3>
+                    <p>Spezialisierte medizinische Behandlungen</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-ambulance"></i>
+                    <h3>Einsatz- und Rettungsdienst</h3>
+                    <p>Notfallrettung vor Ort</p>
+                </div>
+                <div class="department-card">
                     <i class="fas fa-graduation-cap"></i>
-                    <h3>Ausbildung</h3>
-                    <p>Schulung neuer Mitglieder und Fortbildungen.</p>
+                    <h3>Ausbildungsabteilung</h3>
+                    <p>Schulung neuer Mitglieder</p>
                 </div>
-                <div class="card">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h3>Großschadenslagen</h3>
-                    <p>Koordination bei Massenunfällen und Katastrophen.</p>
+                <div class="department-card">
+                    <i class="fas fa-couch"></i>
+                    <h3>Therapie-Abteilung</h3>
+                    <p>Rehabilitation und Therapie</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Chirurgie Abteilung</h3>
+                    <p>Operative Eingriffe und Notoperationen</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Human Resource (HR)</h3>
+                    <p>Personalwesen und Mitarbeiterbetreuung</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Public Relations (PR)</h3>
+                    <p>Öffentlichkeitsarbeit und Kommunikation</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>SGH – Staatliche Gesundheits Hilfe</h3>
+                    <p>Überprüfung der Eignung anderer Fraktionen</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Statistiken -->
-    <section id="stats" class="stats-section">
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section parallax">
         <div class="container">
+            <h2 class="section-title">Unsere Statistiken</h2>
             <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="counter" data-target="1250">0</span>
-                    <p>Einsätze</p>
-                </div>
-                <div class="stat-item">
-                    <span class="counter" data-target="45">0</span>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number" data-target="20">0</div>
                     <p>Mitglieder</p>
                 </div>
-                <div class="stat-item">
-                    <span class="counter" data-target="3200">0</span>
+                <div class="stat-card">
+                    <i class="fas fa-ambulance"></i>
+                    <div class="stat-number" data-target="0">0</div>
+                    <p>Einsätze</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-heart"></i>
+                    <div class="stat-number" data-target="0">0</div>
                     <p>Gerettete Leben</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Karriere -->
-    <section id="career" class="section">
+    <!-- Ranks Section -->
+    <section id="ranks" class="section">
         <div class="container">
-            <h2 class="section-title">Karriere</h2>
-            <p class="section-text">Starte als Praktikant und arbeite dich hoch bis zum Generaldirektor. Ab Visum 1 kannst du dich bewerben.</p>
+            <h2 class="section-title">Rangsystem</h2>
             <div class="ranks-container">
-                <div class="abteilung">
-                    <h4>Direktion</h4>
-                    <ul>
-                        <li>Generaldirektor der Medizin @29</li>
-                        <li>Stellv. Direktor @28</li>
-                    </ul>
+                <div class="rank-group">
+                    <h3>Direktion</h3>
+                    <div class="ranks-list">
+                        <div class="rank-item">30 | Generaldirektor der Medizin</div>
+                        <div class="rank-item">29 | Stellv. Direktor</div>
+                        <div class="rank-item">28 | Assistent Direktor</div>
+                    </div>
                 </div>
-                <div class="abteilung">
-                    <h4>Ärztliche Leitung</h4>
-                    <ul>
-                        <li>Chefarzt @23</li>
-                        <li>Ausbilder @22</li>
-                    </ul>
+                <div class="rank-group">
+                    <h3>Management & Verwaltung</h3>
+                    <div class="ranks-list">
+                        <div class="rank-item">27 | Personalmanagement</div>
+                        <div class="rank-item">26 | Leitender Ausbilder</div>
+                        <div class="rank-item">25 | Krankenhausrat</div>
+                    </div>
                 </div>
-                <div class="abteilung">
-                    <h4>Einsatz- & Rettungsdienst</h4>
-                    <ul>
-                        <li>Notfallsanitäter @13</li>
-                        <li>Sanitäter @8</li>
-                    </ul>
+                <div class="rank-group">
+                    <h3>Ärztliche Leitung</h3>
+                    <div class="ranks-list">
+                        <div class="rank-item">24 | Chefarzt</div>
+                        <div class="rank-item">23 | Ausbilder</div>
+                        <div class="rank-item">22 | Stellv. Chefarzt</div>
+                    </div>
                 </div>
-                <div class="abteilung">
-                    <h4>Ausbildung & Einstieg</h4>
-                    <ul>
-                        <li>Praktikant</li>
-                    </ul>
+                <div class="rank-group">
+                    <h3>Ärzte & Fachpersonal</h3>
+                    <div class="ranks-list">
+                        <div class="rank-item">21 | Leitender Oberarzt</div>
+                        <div class="rank-item">20 | Oberarzt</div>
+                        <div class="rank-item">19 | Fachpersonal</div>
+                        <div class="rank-item">18 | Obermediziner</div>
+                        <div class="rank-item">17 | Seniorarzt</div>
+                        <div class="rank-item">16 | Senior Notfallsanitäter</div>
+                        <div class="rank-item">15 | Fachmediziner</div>
+                    </div>
                 </div>
-                <div class="abteilung">
-                    <h4>Weitere Abteilungen</h4>
-                    <ul>
-                        <li>Therapy</li>
-                        <li>Chirurgie</li>
-                        <li>Ausbildungsabteilung</li>
-                        <li>Staatliche Gesundheitshilfe (SGH)</li>
-                        <li>Public Relations (PR)</li>
-                        <li>Human Resources (HR)</li>
-                    </ul>
+                <div class="rank-group">
+                    <h3>Einsatz- & Rettungsdienst</h3>
+                    <div class="ranks-list">
+                        <div class="rank-item">14 | Notfallsanitäter</div>
+                        <div class="rank-item">13 | Einsatzsanitäter</div>
+                        <div class="rank-item">12 | Stationsmediziner</div>
+                        <div class="rank-item">11 | Leitender Pfleger</div>
+                        <div class="rank-item">10 | Mediziner</div>
+                        <div class="rank-item">9 | Sanitäter</div>
+                        <div class="rank-item">8 | Rettungsassistent</div>
+                        <div class="rank-item">7 | Rettungssanitäter</div>
+                        <div class="rank-item">6 | Rettungshelfer</div>
+                    </div>
+                </div>
+                <div class="rank-group">
+                    <h3>Ausbildung & Einstieg</h3>
+                    <div class="ranks-list">
+                        <div class="rank-item">5 | Junior Mediziner</div>
+                        <div class="rank-item">4 | Auszubildender</div>
+                        <div class="rank-item">3 | Praktikant</div>
+                    </div>
+                </div>
+                <div class="rank-group">
+                    <h3>Sonderstatus</h3>
+                    <div class="ranks-list">
+                        <div class="rank-item">2 | Hausmeister</div>
+                        <div class="rank-item">1 | Suspendiert</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bewerbung -->
-    <section id="apply" class="section apply-section">
+    <!-- Career Section -->
+    <section id="career" class="section">
         <div class="container">
-            <h2 class="section-title">Bewerbung</h2>
-            <p class="section-text">Du kannst dich bereits ab Visum 1 bewerben! Trete unserem Discord bei und starte deine Karriere im LSMD.</p>
-            <a href="https://discord.gg/HzUu9z8zwr" class="cta-btn discord-btn-large" target="_blank">
-                <i class="fab fa-discord"></i> Zum Discord Server
-            </a>
+            <h2 class="section-title">Karriere</h2>
+            <div class="career-content">
+                <p>Im LSMD hat jeder die Möglichkeit aufzusteigen und Verantwortung zu übernehmen.</p>
+                <p>Neue Mitglieder starten mit einer Grundausbildung. Nach erfolgreicher Ausbildung erhält man den Rang: <strong>03 | Praktikant</strong></p>
+                <p>Danach kann man im Außendienst und im Krankenhaus arbeiten.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Team -->
-    <section id="team" class="section">
+    <!-- Apply Section -->
+    <section id="apply" class="section apply-section">
         <div class="container">
-            <h2 class="section-title">Unser Team</h2>
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-avatar"></div>
-                    <h3>Dr. Max Mustermann</h3>
-                    <p>Chefarzt @23</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar"></div>
-                    <h3>Anna Beispiel</h3>
-                    <p>Notfallsanitäter @13</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar"></div>
-                    <h3>John Doe</h3>
-                    <p>Generaldirektor @29</p>
-                </div>
+            <h2 class="section-title">Bewerbung</h2>
+            <div class="apply-content">
+                <p>Du möchtest Teil des LSMD werden?</p>
+                <p>Der Einstieg ist bereits ab Visum 1 möglich.</p>
+                <p>Bewirb dich jetzt über unseren Discord Server.</p>
+                <a href="https://discord.gg/HzUu9z8zwr" class="cta-btn discord-btn" target="_blank">
+                    <i class="fab fa-discord"></i> Discord beitreten
+                </a>
             </div>
         </div>
     </section>
@@ -205,9 +264,17 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <a href="https://discord.gg/HzUu9z8zwr" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+                <div class="footer-logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>LSMD</span>
+                </div>
                 <p>Mystic RP - GTA 5 Roleplay Server</p>
-                <p>&copy; 2026 LSMD. Alle Rechte vorbehalten.</p>
+                <div class="footer-links">
+                    <a href="https://discord.gg/HzUu9z8zwr" target="_blank">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+                <p>&copy; 2026 Los Santos Medical Department. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
